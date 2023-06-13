@@ -31,47 +31,14 @@
 //================================================================================================
 
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 
-// react element
-// const title = (
-//     <h1>This is React Element</h1>
-// )
-const Logo = () => (
-    <a href="/" className="logo">
-        <h1>Swagger Food</h1>
-    </a>
-)
 
-//react component
-const Header = () => {
-    return (
-        <div className="header">
-            <>
-                <Logo />
-            </>
-            <div className="nav-links">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-const Body = () => {
-    return (
-        <h1>Body</h1>
-    )
-}
 
-const Footer = () => {
-    return (
-        <h1>Footer</h1>
-    )
-}
+
 const AppLayout = () => {
     return (
         <>
