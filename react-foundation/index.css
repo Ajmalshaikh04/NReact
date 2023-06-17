@@ -22,7 +22,7 @@
 .restaurant-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
+  justify-content: space-evenly;
 }
 .card {
   width: 250px;
@@ -32,4 +32,14 @@
 }
 .card-img {
   width: 100%;
+}
+.shimmer-card {
+  width: 250px;
+  height: 350px;
+  background: lightgray;
+  margin: 20px;
+}
+.res-menu{
+  display: flex;
+  
 }
