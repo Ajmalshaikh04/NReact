@@ -12,7 +12,7 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const { user,setUser } = useContext(UserContext);
 
-  console.log(allRestaurants);
+  // console.log(allRestaurants);
 
   async function getRestaurants() {
     const data = await fetch(

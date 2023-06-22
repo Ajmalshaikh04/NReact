@@ -1,0 +1,33 @@
+{
+  "name": "app-redux",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Ajmal",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "autoprefixer": "^10.4.14",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "buffer": "^6.0.3",
+    "parcel": "^2.9.2",
+    "postcss": "^8.4.24",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.12.1"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}

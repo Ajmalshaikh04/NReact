@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../custom-hooks/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
+
 
 const authentication = () => {
   return true;
@@ -18,6 +20,9 @@ const Header = () => {
   const isOnline = useOnlineStatus();
 
   const { user } = useContext(UserContext);
+
+  const cartItems=useSelector((store)=>store.cart.items)
+ 
 
   return (
     <div className="header">
@@ -39,10 +44,10 @@ const Header = () => {
           </li>
 
           <li>
-            <Link to={"/cart"}>Cart</Link>
+            <Link to={"/Instamart"}>Instamart</Link>
           </li>
           <li>
-            <Link to={"/Instamart"}>Instamart</Link>
+            <Link to={"/cart"}>Cart- {cartItems.length}</Link>
           </li>
         </ul>
       </div>
