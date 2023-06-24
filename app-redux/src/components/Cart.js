@@ -127,13 +127,18 @@
 
 //=========================================================
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CartCard from "./CartCard";
+import { clearCart } from "../slice/cartSlice";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
   console.log(cartItems);
+const dispatch=useDispatch()
 
+const handelClearCart=()=>{
+  dispatch(clearCart())
+}
   if (cartItems.length === 0) {
     // Handle the case when the cart is empty
     return (
@@ -144,9 +149,10 @@ const Cart = () => {
   }
 
   return (
-    <>
-      <div className="text-2xl font-bold">
+    <div className="flex">
+      <div className="text-2xl font-bold ">
         Cart - {cartItems.length}
+        <button className="px-2 py-1 bg-red-300" onClick={()=>handelClearCart()}>Clear cart</button>
       </div>
       {cartItems.map((item, index) => {
         const {
@@ -167,6 +173,7 @@ const Cart = () => {
         } = item;
 
         return (
+          <div className="">
           <CartCard
             key={index}
             name={name}
@@ -174,9 +181,10 @@ const Cart = () => {
             description={description}
             price={price}
           />
+          </div>
         );
       })}
-    </>
+    </div>
   );
 };
 
